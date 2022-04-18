@@ -10,18 +10,26 @@
     <title>Bate papo UOL</title>
 </head>
 <body>
-    <div class="container">
-        <div class="topo">
-            <img src="/images/logo.svg" alt="">
-            <ion-icon name="people"></ion-icon>
-        </div>
-        <div class="rodape">
-            <input type="text" placeholder="ESCREVA AQUI..." />
-            <ion-icon name="paper-plane-outline"></ion-icon>
-        </div>
-    </div>    
+    <div class="login">
+        <img src="/images/logo.svg" alt="">
+        <input type="text" placeholder="Digite seu nome" onkeydown="logarComEnter(event)" />
+        <button onclick="logar()">Entrar</button>
+    </div>
+
+
+    <div class="topo escondido">
+        <img src="/images/logo.svg" alt="">
+        <ion-icon name="people"></ion-icon>
+    </div>
+    <div class="container escondido">
+    </div>  
+    <div class="rodape escondido">
+        <input type="text" placeholder="Escreva aqui..." onkeydown="enviarComEnter(event)" />
+        <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
+    </div>  
 
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
